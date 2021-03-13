@@ -1,0 +1,40 @@
+﻿@model ProductViewModel
+    <div class="row">
+        <div class="col-3">
+            <ul class="list-group">
+                <li class="list-group-item active">All Products</li>
+                @{
+                    foreach (var category in Model.Categories)
+                    {
+                        <li class="list-group-item">@category</li>
+                    }
+                }
+
+
+            </ul>
+        </div>
+    <div class="col-9">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>CategoryId</th>
+                <th>ProductName</th>
+                <th>UnitPrice</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.CategoryId</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.UnitPrice</td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+    </div>
+    </div>

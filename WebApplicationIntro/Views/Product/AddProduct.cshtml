@@ -1,0 +1,17 @@
+﻿@model AddProductViewModel
+<form asp-controller="Product" asp-action="AddProduct">
+<div class="form-group">
+    <label>ProductName</label>
+    <input asp-for="Product.ProductName" class="form-control">
+</div>
+<div class="form-group">
+    <label>Unitprice</label>
+    <input asp-for="Product.UnitPrice" class="form-control">
+</div>
+<div class="form-group">
+    <label>CategoryId</label>
+    <select asp-for="Product.CategoryId" class="form-control" asp-items="Model.Categories"></select>
+</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+   
